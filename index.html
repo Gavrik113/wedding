@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Приглашение на свадьбу | Олег и Оленька</title>
+<!-- Шрифты и Анимация -->
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Montserrat:wght@300;400&display=swap" rel="stylesheet">
+<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+<style>
+:root {
+--bg-color: #f9f7f2;
+--text-color: #333;
+--accent-color: #a8916d; /* Цвет приглушенного золота */
+--light-grey: #e0ddd5;
+}
+
+* { box-sizing: border-box; }
+
+body {
+margin: 0;
+padding: 0;
+font-family: 'Montserrat', sans-serif;
+background-color: var(--bg-color);
+color: var(--text-color);
+overflow-x: hidden;
+text-align: center;
+}
+
+h1, h2, h3 {
+font-family: 'Playfair Display', serif;
+font-weight: 400;
+}
+
+/* Hero Section */
+.header {
+height: 100vh;
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+background: linear-gradient(rgba(249, 247, 242, 0.4), rgba(249, 247, 242, 0.4)),
+url('https://images.unsplash.com/photo-1507035895480-2b3156c31fc8?q=80&w=2070') no-repeat center center/cover;
+padding: 20px;
+}
+
+.header h1 {
+font-size: clamp(2.5rem, 8vw, 4.5rem);
+margin: 10px 0;
+font-style: italic;
+}
+
+.header p {
+letter-spacing: 4px;
+text-transform: uppercase;
+font-size: 0.9rem;
+}
+
+/* Section Global */
+section {
+padding: 100px 20px;
+max-width: 900px;
+margin: 0 auto;
+}
+
+.divider {
+width: 50px;
+height: 1px;
+background: var(--accent-color);
+margin: 30px auto;
+}
+
+/* Таймер */
+.timer-container {
+display: flex;
+justify-content: center;
+gap: 30px;
+margin: 40px 0;
+}
+.timer-item span {
+display: block;
+font-size: 2.5rem;
+font-family: 'Playfair Display', serif;
+color: var(--accent-color);
+}
+
+/* Расписание (Timeline) */
+.timeline {
+margin-top: 50px;
+position: relative;
+}
+.timeline-item {
+margin-bottom: 50px;
+position: relative;
+}
+.timeline-item h3 { margin: 5px 0; color: var(--accent-color); }
+.timeline-time { font-weight: bold; font-size: 1.1rem; letter-spacing: 1px; }
+
+/* Дресс-код */
+.palette {
+display: flex;
+justify-content: center;
+gap: 15px;
+margin-top: 30px;
+}
+.color-circle {
+width: 50px;
+height: 50px;
+border-radius: 50%;
+border: 1px solid rgba(0,0,0,0.1);
+}
+
+/* Блок Важно */
+.important-box {
+background: #fff;
+padding: 40px;
+border: 1px solid var(--light-grey);
+font-style: italic;
+line-height: 1.8;
+}
+
+.btn {
+display: inline-block;
+padding: 18px 50px;
+border: 1px solid var(--accent-color);
+color: var(--accent-color);
+text-decoration: none;
+text-transform: uppercase;
+letter-spacing: 2px;
+font-size: 0.8rem;
+transition: 0.4s;
+margin-top: 20px;
+}
+.btn:hover {
+background: var(--accent-color);
+color: #fff;
+}
+
+.btn-map {
+margin-top: 15px;
+background-color: transparent;
+font-size: 0.75rem;
+padding: 12px 30px;
+}
+
+footer {
+padding: 60px 20px;
+font-family: 'Playfair Display', serif;
+font-size: 1.5rem;
+opacity: 0.7;
+}
+
+@media (max-width: 600px) {
+.timer-container { gap: 15px; }
+.timer-item span { font-size: 1.8rem; }
+}
+</style>
+</head>
+<body>
+
+<!-- Главный экран -->
+<header class="header">
+<p data-aos="fade-up">Приглашение на свадьбу</p>
+<h1 data-aos="fade-up" data-aos-delay="200">Олег & Оленька</h1>
+<div class="divider" data-aos="zoom-in"></div>
+<p data-aos="fade-up" data-aos-delay="400">05 Августа 2026</p>
+</header>
+
+<!-- Текст-приветствие -->
+<section data-aos="fade-up">
+<h2>Дорогие близкие и друзья!</h2>
+<p>В нашей жизни наступает особенный момент. Мы открываем новую главу нашей истории, основанную на Любви, Вере и Честности.</p>
+<p>Мы будем счастливы, если вы разделите этот день с нами!</p>
+<div class="timer-container" id="timer">
+<!-- Таймер заполняется JS -->
+</div>
+</section>
+
+<!-- Программа дня -->
+<section style="background-color: #fff;">
+<h2 data-aos="fade-up">Программа дня</h2>
+<div class="timeline">
+<div class="timeline-item" data-aos="fade-up">
+<div class="timeline-time">14:30</div>
+<h3>Сбор гостей</h3>
+<p>Свадебная площадка «Дом у Озера»</p>
+</div>
+<div class="timeline-item" data-aos="fade-up" data-aos-delay="200">
+<div class="timeline-time">15:00</div>
+<h3>Церемония Венчания</h3>
+<p>Торжественное обещание перед Богом</p>
+</div>
+<div class="timeline-item" data-aos="fade-up" data-aos-delay="400">
+<div class="timeline-time">17:00</div>
+<h3>Свадебный ужин</h3>
+<p>Теплые поздравления, общение и радость</p>
+</div>
+</div>
+</section>
+
+<!-- Место проведения -->
+<section data-aos="
+fade-up">
+<h2>Место встречи</h2>
+<h3 style="color: var(--accent-color);">Свадебная площадка «Дом у Озера»</h3>
+<p>Московская область, городской округ Солнечногорск,<br>село Алабушево, ул. Горького, д. 36</p>
+<a href="https://yandex.ru/maps?text=56.017092,37.127914&si=053jpt6hb3euvmy7kqchf6cj48" target="_blank" class="btn btn-map">Построить маршрут</a>
+</section>
+
+<!-- Дресс-код -->
+<section data-aos="fade-up" style="background-color: #fff;">
+<h2>Дресс-код</h2>
+<p>Ваше присутствие — лучший подарок для нас. Мы будем признательны, если при выборе нарядов вы поддержите цветовую гамму нашей свадьбы:</p>
+<div class="palette">
+<div class="color-circle" style="background-color: #E6D5C7;"></div>
+<div class="color-circle" style="background-color: #D4C3B5;"></div>
+<div class="color-circle" style="background-color: #BDB7AB;"></div>
+<div class="color-circle" style="background-color: #9A9E8F;"></div>
+<div class="color-circle" style="background-color: #FFFFFF;"></div>
+</div>
+</section>
+
+<!-- Важная информация -->
+<section data-aos="fade-up">
+<div class="important-box">
+<h2>Для нас важно</h2>
+<p>Мы создаем пространство искренности и чистоты. Наш праздник пройдет в формате <strong>без алкоголя и курения</strong>. Мы благодарим вас за уважение к нашим ценностям и желаем, чтобы каждый момент этого дня остался в вашей памяти ясным и радостным.</p>
+<div class="divider"></div>
+<p>Пожалуйста, подтвердите ваше участие<br><strong>до 15 июля 2026 года</strong></p>
+</div>
+<a href="https://docs.google.com/forms/d/e/1FAIpQLSdpNdBR8A4vvxWCp4ofJPbcTYiPnPTJ2_dyO-xkEjlieJUaAw/viewform?usp=publish-editor" target="_blank" class="btn">Подтвердить участие</a>
+</section>
+
+<footer data-aos="zoom-in">
+До встречи 05.08.2026!
+</footer>
+
+<!-- Скрипты -->
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+AOS.init({ duration: 1000, once: true });
+
+// Таймер обратного отсчета
+const weddingDate = new Date("August 5, 2026 14:30:00").getTime();
+const timerUpdate = setInterval(function() {
+const now = new Date().getTime();
+const diff = weddingDate - now;
+
+const d = Math.floor(diff / (1000 * 60 * 60 * 24));
+const h = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+const m = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
+
+document.getElementById("timer").innerHTML = `
+<div class="timer-item"><span>${d}</span>дней</div>
+<div class="timer-item"><span>${h}</span>часов</div>
+<div class="timer-item"><span>${m}</span>минут</div>
+`;
+if (diff < 0) clearInterval(timerUpdate);
+}, 1000);
+</script>
+</body>
+</html>
